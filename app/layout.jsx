@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
-    url: 'https://docs.ds.rick216.cn',
+    url: 'https://docs.deepshare.app',
     title: 'DeepShare 文档 - AI对话导出Word | 公式复制 | 对话截图',
     description: '一键从DeepSeek、ChatGPT等AI对话导出排版精美的Word文档，复制其中的公式；支持DeepSeek对话长截图。',
     siteName: 'DeepShare',
@@ -80,7 +80,7 @@ export default async function RootLayout({ children }) {
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/Yorick-Ryu/deep-share"
+          docsRepositoryBase="https://github.com/Yorick-Ryu/deepshare-docs/tree/main/"
           footer={footer}
           // ... Your additional layout options
         >

@@ -1,9 +1,10 @@
 export default {
   index: '首页',
-  features: '功能介绍',
+  platforms: '支持平台',
   installation: '安装指南',
   usage: '使用教程',
   pricing: '购买与定价',
+  contact: '联系我们',
   faq: '常见问题',
   '---': {
     type: 'separator'
