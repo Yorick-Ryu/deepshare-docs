@@ -25,11 +25,13 @@ export const metadata = {
     title: 'DeepShare 文档 - AI对话导出Word | 公式复制 | 对话截图',
     description: '一键从DeepSeek、ChatGPT等AI对话导出排版精美的Word文档，复制其中的公式；支持DeepSeek对话长截图。',
     siteName: 'DeepShare',
+    images: ['https://docs.deepshare.app/images/cover.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DeepShare 文档',
     description: 'AI对话导出Word | 公式复制 | 对话截图',
+    images: ['https://docs.deepshare.app/images/cover.png'],
   },
   robots: {
     index: true,
