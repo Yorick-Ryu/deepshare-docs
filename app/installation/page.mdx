@@ -1,8 +1,12 @@
-import { Steps } from 'nextra/components'
+import { Steps, Callout } from 'nextra/components'
 
 # 安装指南
 
 本指南将帮助您在不同浏览器上安装 DeepShare 插件。
+
+<Callout type="warning">
+安装后请刷新已打开的 AI 对话使插件生效
+</Callout>
 
 ## 从应用商店安装（推荐）
 
@@ -44,16 +48,15 @@ import { Steps } from 'nextra/components'
 
 如果您想使用最新的开发版本，可以从源代码安装。
 
-### 下载源代码
+直接下载GitHub发布的ZIP文件：
 
-从 GitHub 下载最新版本：
+[下载DeepShare](https://github.com/Yorick-Ryu/deep-share/releases)
+
+或者直接克隆GitHub仓库：
 
 ```bash
 git clone https://github.com/Yorick-Ryu/deep-share.git
 ```
-
-或者直接下载 ZIP 文件：
-[下载 DeepShare 源代码](https://github.com/Yorick-Ryu/deep-share/releases)
 
 ### Edge / Chrome 安装步骤
 
@@ -65,20 +68,6 @@ git clone https://github.com/Yorick-Ryu/deep-share.git
 4. 点击"加载已解压的扩展程序"按钮
 5. 选择解压后的 `deep-share` 文件夹
 6. 安装完成！
-
-## 安装后的设置
-
-### 刷新页面
-
-⚠️ **重要提示**：安装插件后，请刷新所有已打开的 AI 对话页面，以使插件生效。
-
-### 配置 Word 转换功能
-
-如果您需要使用 Word 文档转换功能：
-
-1. 点击浏览器工具栏的 DeepShare 图标
-2. 在弹出的窗口中，找到"文档转换设置"
-3. 填入您的 API Key（[购买 API Key](/pricing)）
 
 ## 验证安装
 
@@ -106,10 +95,9 @@ git clone https://github.com/Yorick-Ryu/deep-share.git
 
 **解决方法**：
 1. 确认插件已成功安装
-2. 刷新浏览器页面
-3. 如果使用开发者模式安装，检查是否有错误提示
+2. 确认插件已[固定到工具栏](#在工具栏中固定deepshare)
 
-### 在 AI 页面看不到按钮
+### 在 AI 页面看不到转换按钮
 
 **解决方法**：
 1. 刷新 AI 对话页面（F5）
@@ -157,21 +145,3 @@ git pull origin main
 ```
 
 然后在浏览器扩展页面点击"重新加载"按钮。
-
-## 卸载插件
-
-如果您需要卸载 DeepShare：
-
-### Edge / Chrome
-
-1. 打开扩展页面
-2. 找到 DeepShare
-3. 点击"移除"按钮
-4. 确认卸载
-
-### Firefox
-
-1. 打开 `about:addons`
-2. 找到 DeepShare
-3. 点击"移除"按钮
-4. 确认卸载
