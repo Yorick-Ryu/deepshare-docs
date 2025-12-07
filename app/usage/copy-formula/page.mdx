@@ -4,10 +4,48 @@ import { Steps, Callout } from 'nextra/components'
 
 <Callout>请确保浏览器已安装 DeepShare 插件，未安装请查看[安装指南](/installation)</Callout>
 
+## 复制公式到Word
+
 以DeepSeek为例，点击公式就可以复制，然后粘贴到Word。
 
 ![DeepSeek-Share](/images/deepseek/copy-formula.png)
 
-如果需要LaTex格式，请点击浏览器工具栏的DeepShare插件图标，点击“公式复制设置”，选择LaTex。
+## 复制公式到WPS
+
+复制公式到WPS稍微复杂一些，不过熟练使用快捷键也是很方便的。
+
+<Steps>
+
+### 修改公式格式
+
+因为WPS需要LaTeX格式，请点击浏览器工具栏的DeepShare插件图标，点击“公式复制设置”，选择LaTeX。
+
+<Callout>如果您不知道如何打开图中这个界面，[请看这里](/installation#在工具栏中固定deepshare)。</Callout>
 
 ![DeepSeek-Share](/images/formula/select-latex.png)
+
+### 复制公式
+
+点击公式复制，粘贴到WPS。
+
+![DeepSeek-Share](/images/deepseek/copy-formula.png)
+
+### 插入公式框
+
+点击顶部菜单栏「插入」→「公式」→「插入公式」或「插入LaTeX」
+
+Windows使用快捷键`Alt + =`插入公式框；
+
+Mac使用快捷键`Command + Shift + F`插入公式框。
+
+![insert-formula](/images/wps/insert-formula.png)
+
+### 粘贴LaTeX代码
+
+粘贴LaTeX代码后在公式框末尾按`Enter`，自动转换为标准公式。
+
+![insert-formula](/images/wps/paste-formula.gif)
+
+</Steps>
+
+参考WPS官方教程：[WPS文字支持「LaTeX转换公式」的功能啦！](https://forum.wps.cn/topic/53595)
