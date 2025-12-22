@@ -8,8 +8,8 @@ export const metadata = {
     default: 'DeepShare 文档 - AI对话导出Word | 公式复制 | 对话截图',
     template: '%s | DeepShare'
   },
-  description: 'DeepShare - 一键从DeepSeek、ChatGPT、豆包等AI对话导出排版精美的Word文档，复制其中的公式；支持DeepSeek对话长截图。免费开源浏览器插件。',
-  keywords: ['DeepShare', 'DeepSeek', 'ChatGPT转Word', 'DeepSeek转Word', 'AI对话导出', '公式复制', 'LaTeX', 'Word导出', '截图分享', '浏览器插件'],
+  description: 'DeepShare - 一键从DeepSeek、ChatGPT、Gemini、豆包等AI对话导出排版精美的Word文档，复制其中的公式；支持DeepSeek对话长截图。免费开源浏览器插件。',
+  keywords: ['DeepShare', 'DeepSeek', 'ChatGPT转Word', 'DeepSeek转Word', 'Gemini转Word', 'AI对话导出', '公式复制', 'LaTeX', 'Word导出', '截图分享', '浏览器插件'],
   authors: [{ name: 'DeepShare Team' }],
   creator: 'DeepShare',
   publisher: 'DeepShare',
@@ -23,7 +23,7 @@ export const metadata = {
     locale: 'zh_CN',
     url: 'https://docs.deepshare.app',
     title: 'DeepShare 文档 - AI对话导出Word | 公式复制 | 对话截图',
-    description: '一键从DeepSeek、ChatGPT等AI对话导出排版精美的Word文档，复制其中的公式；支持DeepSeek对话长截图。',
+    description: '一键从DeepSeek、ChatGPT、Gemini、豆包等AI对话导出排版精美的Word文档，复制其中的公式；支持DeepSeek对话长截图。',
     siteName: 'DeepShare',
     images: ['https://docs.deepshare.app/images/cover.png'],
   },
@@ -46,7 +46,7 @@ export const metadata = {
   },
 }
  
-const banner = <Banner storageKey="deepshare-banner">🎉 DeepShare 现已支持 Word 文档一键导出功能！</Banner>
+const banner = <Banner storageKey="deepshare-banner">🎉 DeepShare现已支持AI对话导出Word文档！</Banner>
 const navbar = (
   <Navbar
     logo={

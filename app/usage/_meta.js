@@ -8,6 +8,7 @@ export default {
   'qwen-to-word': '千问导出Word',
   'gemini-to-md': 'Gemini导出Markdown',
   'gemini-canvas-to-word': 'Gemini Canvas导出Word',
+  'gemini-deep-research-to-word': 'Gemini Deep Research导出Word',
   'gemini-deep-research-to-md': 'Gemini Deep Research导出Markdown',
   'doubao-side-to-word': '豆包“帮我写作”导出Word',
   'copy-formula': '复制AI对话中公式',
