@@ -15,5 +15,6 @@ export default {
   'copy-formula': '复制AI对话中公式',
   'select-word-template': '选择Word模版',
   'remove-dividers': '去除Word的分割线',
-  'remove-emoji': '去除Word的Emoji表情'
+  'remove-emoji': '去除Word的Emoji表情',
+  'mcp-server': 'Markdown转Word MCP'
 }

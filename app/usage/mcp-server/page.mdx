@@ -1,0 +1,60 @@
+# Markdown转Word MCP服务器使用指南
+
+DeepShare提供了一个基于Model Context Protocol (MCP)的服务器`md2doc`，允许您在支持MCP的AI客户端（如[Cherry Studio](https://www.cherry-ai.com/), [Alma](https://alma.now/) 等）中直接将AI生成的Markdown内容转换为排版精美的Word文档。
+
+## 主要功能
+
+- 在AI客户端中直接调用`convert_markdown_to_docx`工具，将Markdown直接转为Word文档
+- 多种模版选择
+- 自动保存到`Downloads`目录
+- 与 [DeepShare](https://ds.rick216.cn/) 网页版/插件版共享 API-KEY 和 配额
+
+## 配置说明
+
+### 1. 获取 API-KEY
+
+在使用 MCP 服务器之前，您需要获取一个有效的 API-KEY：
+- [购买DeepShare API-KEY](https://ds.rick216.cn/purchase)
+- 您可以使用测试 Key 进行试用：`f4e8fe6f-e39e-486f-b7e7-e037d2ec216f`，如果额度用尽，可以通过邮件请求试用: yoricker@foxmail.com
+
+### 2. 在Cherry Studio中配置
+
+1. 打开Cherry Studio设置
+2. 进入**MCP**选项卡
+3. 添加新的MCP服务器：
+   - **名称**: `md2doc`
+   - **类型**: `stdio`
+   - **命令**: `uvx`
+   - **参数**: `md2doc`
+   - **环境变量**:
+     - `DEEP_SHARE_API_KEY`: 您的 API-KEY
+
+![Cherry Studio MCP](/images/deepshare/cherry-studio-mcp.png)
+
+### 3. 在Alma中配置
+
+1. 打开Alma设置
+2. 进入**MCP**选项卡
+3. 添加新的MCP服务器：
+   - **名称**: `md2doc`
+   - **命令**: `uvx`
+   - **参数**: `md2doc`
+   - **环境变量**:
+     - `DEEP_SHARE_API_KEY`: 您的 API-KEY
+
+![Alma MCP](/images/deepshare/alma-mcp.png)
+
+## 使用方法
+
+配置完成后，在对话中勾选`md2doc`MCP，要求AI将内容转换为Word文档。例如：
+
+> 请将上面的内容转换为Word文档，使用"论文"模版。
+
+AI 会调用`convert_markdown_to_docx`工具，完成后文件将自动保存到您的**下载 (Downloads)** 文件夹中。
+
+![Alma MCP Demo](/images/deepshare/alma-mcp-demo.png)
+
+## MCP工具列表
+
+- `convert_markdown_to_docx`: 将 Markdown 文本转换为 DOCX。
+- `list_templates`: 获取当前语言（zh/en）下的可用模版列表。
