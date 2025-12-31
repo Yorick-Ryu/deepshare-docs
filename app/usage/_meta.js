@@ -11,6 +11,7 @@ export default {
   'gemini-canvas-to-md': 'Gemini Canvas导出Markdown',
   'gemini-deep-research-to-word': 'Gemini Deep Research导出Word',
   'gemini-deep-research-to-md': 'Gemini Deep Research导出Markdown',
+  'aistudio-to-word': 'Google AI Studio导出Word',
   'doubao-side-to-word': '豆包“帮我写作”导出Word',
   'copy-formula': '复制AI对话中公式',
   'select-word-template': '选择Word模版',
