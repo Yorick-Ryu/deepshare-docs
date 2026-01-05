@@ -50,9 +50,34 @@ DeepShare提供了一个基于Model Context Protocol (MCP)的服务器`md2doc`�
 
 > 请将上面的内容转换为Word文档，使用"论文"模版。
 
-AI 会调用`convert_markdown_to_docx`工具，完成后文件将自动保存到您的**下载 (Downloads)** 文件夹中。
+AI 会调用`convert_markdown_to_docx`工具，完成后文件将按以下方式交付：
+- **本地客户端**: 文件将自动保存到您的**下载 (Downloads)** 文件夹中。
+- **云端/Docker部署**: 助手将返回一个**临时下载链接**（由 Cloudflare R2 提供）。
 
 ![Alma MCP Demo](/images/deepshare/alma-mcp-demo.png)
+
+## 进阶配置：云端/Docker 部署
+
+如果您是在远程服务器（如 VPS、Docker 容器）上运行 MCP 服务器，由于服务器无法访问您的本地磁盘，建议启用远程保存模式：
+
+### 环境变量配置
+
+在您的 Docker Compose 或服务器环境变量中添加以下配置：
+
+- `MCP_SAVE_REMOTE`: 设置为 `true`
+- `DEEP_SHARE_API_KEY`: 您的 API-KEY
+
+### 运行示例
+
+```bash
+# 在云端环境中运行
+export MCP_SAVE_REMOTE=true
+export DEEP_SHARE_API_KEY="your-api-key-here"
+
+uvx md2doc
+```
+
+启用该模式后，转换工具将不再尝试写入本地磁盘，而是将文档上传到云端存储并返回URL。
 
 ## MCP工具列表
 
