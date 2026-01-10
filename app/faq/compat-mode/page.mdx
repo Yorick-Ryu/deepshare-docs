@@ -1,0 +1,40 @@
+import { Steps, Callout } from 'nextra/components'
+
+# 兼容模式
+
+<Callout>
+
+请确保浏览器已安装 DeepShare 插件，未安装请查看[安装指南](/installation)
+
+本模式仅针对 Word 导出功能。
+
+</Callout>
+
+### 什么是兼容模式？
+
+兼容模式旨在提高对“不规范”Markdown 源码的容错率。
+
+Pandoc（DeepShare 后端使用的转换引擎）在解析 Markdown 时有一些严格的规范：
+- **引用块前空行**：标准 Markdown 要求 `>` 引用块之前必须有一个空行，否则可能无法正确识别为引用。
+- **列表前空行**：列表之前通常也需要空行。
+
+**开启兼容模式后：**
+DeepShare 会自动处理这些格式问题，允许引用块和列表前没有空行。这对于许多 AI 生成的、格式并不完全严谨的 Markdown 内容非常有用，能有效防止导出时样式错乱或丢失。
+
+### 如何使用？
+
+默认情况下，「兼容模式」是开启的。如果不希望 DeepShare 自动调整格式，可以在插件设置界面将其关闭。
+
+<Steps>
+
+### 点击工具栏中的 DeepShare 插件
+
+![Click DeepShare](/images/deepshare/click-deepshare.png)
+
+### 找到「兼容模式」开关
+
+默认已勾选。
+
+![Compat Mode](/images/deepshare/compat-mode.png)
+
+</Steps>

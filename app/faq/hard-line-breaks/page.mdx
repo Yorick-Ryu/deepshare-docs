@@ -1,0 +1,37 @@
+import { Steps, Callout } from 'nextra/components'
+
+# 强制换行 (Hard Line Breaks)
+
+<Callout>
+
+请确保浏览器已安装 DeepShare 插件，未安装请查看[安装指南](/installation)
+
+本选项仅针对 Word 导出功能。
+
+</Callout>
+
+### 什么是强制换行？
+
+在标准的 Markdown 语法中，**单次换行通常被视为空格**，只有当两个文本行之间存在**两个及以上的换行**（即一个完整的空行）时，才会被识别为段落切换。
+
+但在某些场景下（例如诗歌、对话排版或简单的列表备注），你可能希望 Markdown 中的每一次换行都能直接在生成的 Word 文档中体现出来。
+
+**开启「强制换行」后：**
+DeepShare 会要求转换引擎将源码中的每一个单次换行都处理为 Word 中的“软回车”（Shift + Enter），从而精准保留你的排版结构，但是某些格式，如公式前后会自动增加多余的换行。
+
+
+### 如何使用？
+
+该功能默认关闭。如果你的文档导出后发现本该换行的地方变成了空格，请尝试开启此选项。
+
+<Steps>
+
+### 点击工具栏中的 DeepShare 插件
+
+![Click DeepShare](/images/deepshare/click-deepshare.png)
+
+### 勾选「强制换行」
+
+![Hard Line Breaks](/images/deepshare/hard-line-breaks.png)
+
+</Steps>
