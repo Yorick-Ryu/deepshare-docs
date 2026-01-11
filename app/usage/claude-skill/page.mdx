@@ -1,0 +1,206 @@
+# Claude Code 中导出 Word Skill
+
+在 Claude Code 中，您可以使用 `md2docx` Skill 直接将 Markdown 内容转换为专业排版的 Word 文档。这个 Skill 让 Claude 能够自动处理文档转换，无需手动操作。
+
+## 主要功能
+
+- 在对话中直接转换 Markdown 到 Word
+- 支持多种中英文模板（论文、文章、书籍等）
+- 自动选择 API Key（环境变量 → Skill 配置 → 试用密钥）
+- 支持数学公式、代码块、表格等复杂格式
+- 返回云端下载链接，方便访问
+
+## 安装 Skill
+
+### 方法 1：手动安装（推荐）
+
+1. 在 Claude Code 中创建 Skill 目录：
+   ```bash
+   mkdir -p ~/.claude/skills/md2docx
+   ```
+
+2. 下载 Skill 文件：
+   - 访问 [md2docx Skill GitHub](https://github.com/Yorick-Ryu/deep-share/tree/master/.claude/skills/md2docx)
+   - 下载 `SKILL.md` 并移动到 `~/.claude/skills/md2docx/SKILL.md`
+
+3. 创建转换脚本目录：
+   ```bash
+   mkdir -p ~/.claude/skills/md2docx/scripts
+   ```
+
+4. 下载 `convert.py` 脚本到 `scripts/` 目录
+
+### 方法 2：通过插件安装（即将推出）
+
+Claude Code 插件市场即将推出 md2docx Skill，届时可一键安装。
+
+## 配置 API Key
+
+您可以通过三种方式配置 API Key，优先级从高到低：
+
+### 方式 1：环境变量（推荐）
+
+```bash
+# 在 ~/.zshrc 或 ~/.bashrc 中添加
+export DEEP_SHARE_API_KEY="your_api_key_here"
+
+# 使配置生效
+source ~/.zshrc
+```
+
+**优点**：全局生效，所有项目共享
+
+### 方式 2：Skill 配置
+
+编辑 `~/.claude/skills/md2docx/SKILL.md`，在 YAML 头部添加：
+
+```yaml
+---
+name: md2docx
+description: Convert Markdown to Word...
+api_key: "your_api_key_here"
+---
+```
+
+**优点**：针对这个 Skill 的专用配置
+
+### 方式 3：试用密钥（无需配置）
+
+如果未配置 API Key，会自动使用试用密钥：
+```
+f4e8fe6f-e39e-486f-b7e7-e037d2ec216f
+```
+
+**注意**：试用密钥额度有限，建议购买正式 API Key。
+
+## 获取 API Key
+
+- [购买 DeepShare API Key](https://ds.rick216.cn/purchase)
+- 价格：¥0.2/次，支持批量购买享优惠
+- 试用密钥可用于测试功能
+
+## 使用方法
+
+### 基础转换
+
+在 Claude Code 中与 Claude 对话：
+
+```
+你：请将这段 Markdown 转换为 Word 文档
+
+# 我的报告
+
+这是一份测试文档。
+
+## 第一部分
+
+内容...
+```
+
+Claude 会自动：
+1. 识别这是 Markdown 转换任务
+2. 调用 md2docx Skill
+3. 保存 Markdown 到临时文件
+4. 运行转换脚本
+5. 返回下载链接
+
+**输出示例**：
+```
+✓ 转换成功！
+
+下载地址：
+https://flies.deepshare.app/mcp/abc123/report_xyz.docx
+
+```
+
+### 指定模板
+
+您可以要求 Claude 使用特定模板：
+
+```
+你：请将这篇论文转换为 Word，使用"论文"模板
+```
+
+或：
+
+```
+你：转换为英文文章格式的 Word 文档
+```
+
+Claude 会自动选择合适的模板（如 `论文`、`article` 等）。
+
+### 支持的模板
+
+**中文模板** (`language: zh`)：
+- `templates` - 通用默认模板
+- `论文` - 学术论文格式
+- `论文-首行不缩进` - 西式论文格式
+- `论文-标题加粗` - 强调标题的论文格式
+- `英文通用` - 中文环境下的英文排版
+
+**英文模板** (`language: en`)：
+- `templates` - 通用默认模板
+- `article` - 文章/报道格式
+- `thesis` - 学术论文格式
+- `book1`、`book2` - 书籍出版格式
+- `short-fiction` - 短篇小说/创意写作格式
+
+## 工作原理
+
+1. **触发检测**：Claude 识别到 Markdown 转 Word 的请求
+2. **Skill 加载**：自动加载 md2docx Skill
+3. **准备内容**：将 Markdown 内容保存到临时文件
+4. **API Key 选择**：
+   - 检查环境变量 `DEEP_SHARE_API_KEY`
+   - 未设置则检查 Skill 配置
+   - 都没有则使用试用密钥
+5. **执行转换**：运行 `scripts/convert.py` 脚本
+6. **返回结果**：
+   - 成功：提供下载 URL
+   - 失败：说明错误原因和解决方案
+7. **清理**：删除临时文件
+
+## 进阶使用
+
+### 批量转换
+
+如果有多个文件需要转换：
+
+```
+你：请将 docs/ 目录下的所有 Markdown 文件转换为 Word
+```
+
+Claude 会遍历文件并逐个转换。
+
+### 集成到工作流
+
+您可以要求 Claude 在完成文档编写后自动转换：
+
+```
+你：帮我写一份产品说明文档，完成后转换为 Word
+```
+
+### 自定义 Skill 配置
+
+您可以编辑 `~/.claude/skills/md2docx/SKILL.md` 来自定义：
+
+```yaml
+---
+name: md2docx
+description: Convert Markdown to Word...
+api_key: "your_default_key"
+---
+```
+
+## 技术支持
+
+- **邮件**：yoricker@foxmail.com
+- **微信**：yorick_cn（备注：DeepShare）
+- **购买/查询**：[https://ds.rick216.cn/purchase](https://ds.rick216.cn/purchase)
+
+## 相关资源
+
+- [DeepShare 浏览器插件](https://ds.rick216.cn/)
+- [MCP 服务器使用指南](/usage/mcp-server)
+
+**提示**：这个 Skill 与 DeepShare 的其他功能（浏览器插件、MCP 服务器）共享 API Key 和配额，一次购买即可在多个场景使用！

@@ -17,5 +17,6 @@ export default {
   'select-word-template': '选择Word模版',
   'remove-dividers': '去除Word的分割线',
   'remove-emoji': '去除Word的Emoji表情',
-  'mcp-server': 'Markdown转Word MCP'
+  'mcp-server': 'Markdown转Word MCP',
+  'claude-skill': 'Claude Code Skill'
 }
