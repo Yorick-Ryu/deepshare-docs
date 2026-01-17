@@ -17,7 +17,7 @@ function getIconForPage(pageId, icons) {
   }
   // 公式相关
   if (pageId.includes('formula')) {
-    return icons.InformationCircleIcon
+    return icons.FormulaIcon
   }
   // 模版和样式相关
   if (pageId.includes('template') || pageId.includes('remove-')) {
@@ -39,7 +39,7 @@ export function OverviewPage({ filePath, icons }) {
   // 从文件路径推断当前目录
   const currentDir = filePath.split('/').slice(0, -1).join('/')
   const sectionName = currentDir.split('/').pop()
-  
+
   // 动态生成页面列表
   const pages = Object.entries(meta)
     .filter(([key]) => key !== 'index') // 排除索引页面本身
