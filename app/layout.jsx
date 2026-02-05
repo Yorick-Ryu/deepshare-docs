@@ -2,7 +2,7 @@ import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
- 
+
 export const metadata = {
   title: {
     default: 'DeepShare 文档 - AI对话导出Word | 公式复制 | 对话截图',
@@ -45,13 +45,19 @@ export const metadata = {
     },
   },
 }
- 
-const banner = <Banner storageKey="deepshare-banner">🎉 DeepShare现已支持AI对话导出Word文档！</Banner>
+
+const banner = (
+  <Banner storageKey="deepshare-banner">
+    <a href="/usage/gemini-deep-research-to-word">
+      🎉 DeepShare现已支持Gemini Deep Research导出Word文档！
+    </a>
+  </Banner>
+)
 const navbar = (
   <Navbar
     logo={
       <>
-        <img src="/images/deepshare-icon.svg" alt="Logo" width={40} height={40}/>
+        <img src="/images/deepshare-icon.svg" alt="Logo" width={40} height={40} />
         <span style={{ marginLeft: '.4em', fontWeight: 800, fontSize: '1.2em' }}>
           DeepShare
         </span>
@@ -61,7 +67,7 @@ const navbar = (
   />
 )
 const footer = <Footer>MIT {new Date().getFullYear()} © DeepShare.</Footer>
- 
+
 export default async function RootLayout({ children }) {
   return (
     <html
@@ -84,7 +90,7 @@ export default async function RootLayout({ children }) {
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/Yorick-Ryu/deepshare-docs/tree/main/"
           footer={footer}
-          // ... Your additional layout options
+        // ... Your additional layout options
         >
           {children}
         </Layout>
