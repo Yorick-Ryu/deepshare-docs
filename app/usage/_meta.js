@@ -6,6 +6,7 @@ export default {
   'kimi-to-word': 'Kimi导出Word',
   'doubao-to-word': '豆包导出Word',
   'qwen-to-word': '千问导出Word',
+  'yuanbao-to-word': '元宝导出Word',
   'gemini-to-md': 'Gemini导出Markdown',
   'gemini-canvas-to-word': 'Gemini Canvas导出Word',
   'gemini-canvas-to-md': 'Gemini Canvas导出Markdown',
