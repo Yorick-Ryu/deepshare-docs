@@ -1,0 +1,38 @@
+import { Steps, Callout } from 'nextra/components'
+
+# Hard Line Breaks
+
+<Callout>
+
+Please ensure the DeepShare extension is installed in your browser. If not, see the [Installation Guide](/en/installation).
+
+This option applies to the Word export feature only.
+
+</Callout>
+
+### What are Hard Line Breaks?
+
+In standard Markdown syntax, **a single line break is treated as a space**. Only when there are **two or more consecutive line breaks** (i.e., a full blank line) between text lines is it recognized as a paragraph break.
+
+However, in some scenarios (e.g., poetry, dialogue formatting, or simple list notes), you may want every line break in Markdown to be reflected directly in the generated Word document.
+
+**When "Hard Line Breaks" is enabled:**
+DeepShare instructs the conversion engine to treat every single line break in the source as a "soft return" (Shift + Enter) in Word, precisely preserving your layout structure. However, this has side effects for some formats — for example, **extra line breaks are automatically added before and after formulas**.
+
+![Hard Line Breaks Contrast](/images/deepshare/hard-line-breaks-contrast.png)
+
+### How to Use
+
+This feature is disabled by default. If your exported document has spaces where there should be line breaks, try enabling this option.
+
+<Steps>
+
+### Click the DeepShare extension in the toolbar
+
+![Click DeepShare](/images/deepshare/click-deepshare.png)
+
+### Check "Hard Line Breaks"
+
+![Hard Line Breaks](/images/deepshare/hard-line-breaks.png)
+
+</Steps>

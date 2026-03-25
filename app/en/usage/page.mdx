@@ -1,0 +1,43 @@
+---
+asIndexPage: true
+---
+
+import {
+  BrushIcon,
+  DocumentIcon,
+  GlobeIcon,
+  LightningIcon,
+  PictureIcon,
+  StarsIcon,
+  FormulaIcon,
+  LinkIcon
+} from '../../_components/icons'
+import { MarkdownIcon } from 'nextra/icons'
+import { OverviewPage } from '../../_components/overview-page'
+import enMeta from '../usage/_meta.js'
+
+# Tutorials
+
+> [!IMPORTANT]
+>
+> Before using DeepShare, please ensure:
+> 1. The DeepShare extension is installed in your browser. If not, see the [**Installation Guide**](/en/installation)
+> 2. [**Purchase**](/en/pricing) and enter your API Key (only required for Word export; other features are free)
+
+
+<OverviewPage
+  filePath={metadata.filePath}
+  meta={enMeta}
+  prefix="/en"
+  icons={{
+    DocumentIcon,
+    MarkdownIcon,
+    StarsIcon,
+    LinkIcon,
+    PictureIcon,
+    LightningIcon,
+    GlobeIcon,
+    BrushIcon,
+    FormulaIcon
+  }}
+/>

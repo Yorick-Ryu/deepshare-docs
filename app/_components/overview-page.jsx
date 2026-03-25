@@ -1,5 +1,5 @@
 import { Cards } from 'nextra/components'
-import meta from '../usage/_meta.js'
+import defaultMeta from '../usage/_meta.js'
 
 // 根据页面 ID 自动分配图标
 function getIconForPage(pageId, icons) {
@@ -35,7 +35,8 @@ function getIconForPage(pageId, icons) {
   return icons.InformationCircleIcon
 }
 
-export function OverviewPage({ filePath, icons }) {
+export function OverviewPage({ filePath, icons, meta: metaOverride, prefix = '' }) {
+  const meta = metaOverride || defaultMeta
   // 从文件路径推断当前目录
   const currentDir = filePath.split('/').slice(0, -1).join('/')
   const sectionName = currentDir.split('/').pop()
@@ -47,7 +48,7 @@ export function OverviewPage({ filePath, icons }) {
       id,
       title,
       icon: getIconForPage(id, icons),
-      href: `/${sectionName}/${id}`
+      href: `${prefix}/${sectionName}/${id}`
     }))
 
   return (

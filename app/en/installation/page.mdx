@@ -1,0 +1,152 @@
+import { Steps, Callout } from 'nextra/components'
+
+# Installation Guide
+
+This guide will help you install the DeepShare extension on different browsers.
+
+## Install from Store (Recommended)
+
+> [!IMPORTANT]
+>
+> After installation, please refresh any open AI chat pages for the extension to take effect
+
+### Microsoft Edge
+
+1. Visit the [Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/deepshare/pdccjnppfegekpnhfljbngammgfbcofm)
+2. Click the "Get" button
+3. Confirm the installation in the popup dialog
+4. After installation, the DeepShare icon will appear in the browser toolbar
+
+### Google Chrome
+
+1. Visit the [Chrome Web Store](https://chromewebstore.google.com/detail/omnaecaamcabmnbjnpjpecoaalfgidop)
+2. Click the "Add to Chrome" button
+3. Confirm the installation in the popup dialog
+4. After installation, the DeepShare icon will appear in the browser toolbar
+
+### Mozilla Firefox
+
+1. Visit the [Firefox Add-ons Store](https://addons.mozilla.org/firefox/addon/deepshare/)
+2. Click the "Add to Firefox" button
+3. Confirm the installation and grant permissions in the popup dialog
+4. After installation, the DeepShare icon will appear in the browser toolbar
+
+## Pin DeepShare to Toolbar
+
+![Pin](https://flies.deepshare.app/pin-deepshare.gif)
+
+Step-by-step guide:
+
+<Steps>
+
+### Click the extensions icon in the browser toolbar
+
+![Click Addon](/images/deepshare/addons.png)
+
+### Pin DeepShare
+
+![Pin](/images/deepshare/pin.png)
+
+</Steps>
+
+## Local Installation (Developer Mode)
+
+If you want to use the latest development version, you can install from source.
+
+Download the ZIP file directly from GitHub releases:
+
+[Download DeepShare](https://github.com/Yorick-Ryu/deep-share/releases)
+
+Or clone the GitHub repository:
+
+```bash
+git clone https://github.com/Yorick-Ryu/deep-share.git
+```
+
+### Edge / Chrome Installation Steps
+
+1. Unzip the downloaded source code
+2. Open your browser and enter in the address bar:
+   - Edge: `edge://extensions/`
+   - Chrome: `chrome://extensions/`
+3. Enable the "Developer mode" toggle in the top right
+4. Click "Load unpacked" button
+5. Select the unzipped `deep-share` folder
+6. Installation complete!
+
+## Verify Installation
+
+After installation, you can verify it as follows:
+
+### Check the Browser Toolbar
+
+The browser toolbar should show the DeepShare icon (a blue bird)
+
+### Visit an AI Platform
+
+1. Open [DeepSeek](https://chat.deepseek.com/)
+2. Start a new conversation
+3. You should see the buttons added by DeepShare in the top right of the page
+
+### Test Formula Copying
+
+1. Ask the AI to generate a response containing a math formula
+2. Try clicking on the formula
+3. You should see a successful copy notification
+
+## Common Installation Issues
+
+### Extension Icon Not Showing
+
+**Solution**:
+1. Confirm the extension was successfully installed
+2. Confirm the extension is [pinned to the toolbar](#pin-deepshare-to-toolbar)
+
+### Can't See Export Button on AI Pages
+
+**Solution**:
+1. Refresh the AI chat page (F5)
+2. Check that the extension is enabled
+3. Confirm the AI platform is in the supported list
+
+### Firefox Security Warning
+
+**Solution**:
+1. This is normal — temporarily installed extensions show this warning
+2. Click "Continue"
+3. It is recommended to install from the official Firefox Add-ons Store
+
+### Edge/Chrome Installation Failed
+
+**Solution**:
+1. Confirm "Developer mode" is enabled
+2. Check that the folder path is correct
+3. Check the browser console for error messages
+4. Try re-downloading the source code
+
+## Update the Extension
+
+### Store Version
+
+Extensions installed from the store update automatically — no manual action needed.
+
+Automatic updates can sometimes be delayed. If you can't wait, you can update the extension manually (Edge and Chrome):
+
+![update](/images/deepshare/update.jpg)
+
+### Local Installation Version
+
+If using developer mode installation:
+
+1. Download the latest source code
+2. Delete the old version files
+3. Follow the installation steps again
+
+Or update using Git:
+
+```bash
+cd deep-share
+git pull origin main
+```
+
+Then click the "Reload" button on the browser extensions page.

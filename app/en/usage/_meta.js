@@ -1,0 +1,23 @@
+export default {
+  'copy-formula': 'Copy Formulas from AI Chats',
+  'deepseek-to-image': 'DeepSeek Export to Image',
+  'deepseek-to-word': 'DeepSeek Export to Word',
+  'chatgpt-to-word': 'ChatGPT Export to Word',
+  'gemini-to-word': 'Gemini Export to Word',
+  'kimi-to-word': 'Kimi Export to Word',
+  'doubao-to-word': 'Doubao Export to Word',
+  'qwen-to-word': 'Qwen Export to Word',
+  'yuanbao-to-word': 'Yuanbao Export to Word',
+  'gemini-to-md': 'Gemini Export to Markdown',
+  'gemini-canvas-to-word': 'Gemini Canvas Export to Word',
+  'gemini-canvas-to-md': 'Gemini Canvas Export to Markdown',
+  'gemini-deep-research-to-word': 'Gemini Deep Research Export to Word',
+  'gemini-deep-research-to-md': 'Gemini Deep Research Export to Markdown',
+  'aistudio-to-word': 'Google AI Studio Export to Word',
+  'doubao-side-to-word': 'Doubao "Writing Assistant" Export to Word',
+  'select-word-template': 'Select Word Template',
+  'remove-dividers': 'Remove Dividers from Word',
+  'remove-emoji': 'Remove Emoji from Word',
+  'mcp-server': 'Markdown to Word MCP Server',
+  'claude-skill': 'Claude Code Skill'
+}

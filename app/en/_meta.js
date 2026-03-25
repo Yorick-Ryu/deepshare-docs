@@ -1,33 +1,29 @@
 export default {
-  index: '首页',
-  platforms: '支持平台',
-  installation: '安装指南',
-  usage: '使用教程',
-  pricing: '购买与定价',
-  contact: '联系我们',
-  faq: '常见问题',
+  index: 'Home',
+  platforms: 'Supported Platforms',
+  installation: 'Installation Guide',
+  usage: 'Tutorials',
+  pricing: 'Pricing',
+  contact: 'Contact Us',
+  faq: 'FAQ',
   '---': {
     type: 'separator'
   },
-  privacy: '隐私政策',
-  terms: '使用条款',
-  // Hide English section from Chinese sidebar
-  en: {
-    display: 'hidden'
-  },
-  // 导航栏链接和菜单
+  privacy: 'Privacy Policy',
+  terms: 'Terms of Service',
+  // Navbar links and menus
   converter: {
-    title: 'AI对话转Word',
-    href: 'https://ds.rick216.cn/converter.html',
+    title: 'AI Chat to Word',
+    href: 'https://ds.rick216.cn/converter-en.html',
     type: 'page'
   },
   purchase: {
-    title: '购买',
-    href: 'https://ds.rick216.cn/price.html',
+    title: 'Purchase',
+    href: 'https://ds.rick216.cn/purchase-en.html',
     type: 'page'
   },
   download: {
-    title: '下载插件',
+    title: 'Install Extension',
     type: 'menu',
     items: {
       chrome: {
