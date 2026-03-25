@@ -1,9 +1,11 @@
 {
   "scripts": {
     "dev": "next",
+    "optimize:images": "node scripts/optimize-images.mjs out/images",
     "build": "next build",
+    "preview:static": "npm run build && npx serve out -l 4173",
     "start": "next start",
-    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind"
+    "postbuild": "npm run optimize:images && pagefind --site out --output-path out/_pagefind"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "baseline-browser-mapping": "^2.9.19",
-    "pagefind": "^1.4.0"
+    "pagefind": "^1.4.0",
+    "sharp": "^0.34.5"
   }
 }

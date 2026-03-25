@@ -3,3 +3,4 @@ package-lock.json
 .next
 .vercel
 _pagefind/
+out
