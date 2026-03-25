@@ -9,7 +9,7 @@ export const metadata = {
     template: '%s | DeepShare'
   },
   description: 'DeepShare - 一键从DeepSeek、ChatGPT、Gemini、豆包等AI对话导出排版精美的Word文档，复制其中的公式；支持DeepSeek对话长截图。免费开源浏览器插件。',
-  keywords: ['DeepShare', 'DeepSeek', 'ChatGPT转Word', 'DeepSeek转Word', 'Gemini转Word', 'AI对话导出', '公式复制', 'LaTeX', 'Word导出', '截图分享', '浏览器插件'],
+  keywords: ['DeepShare', 'ChatGPT转Word', 'DeepSeek转Word', 'Gemini转Word',  'Deep Research导出Word', '豆包转Word', 'AI对话导出', '公式复制', 'LaTeX', '导出Word', '浏览器插件'],
   authors: [{ name: 'DeepShare Team' }],
   creator: 'DeepShare',
   publisher: 'DeepShare',
