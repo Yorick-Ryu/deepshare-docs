@@ -1,3 +1,4 @@
+import 'nextra-theme-docs/style.css'
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
@@ -87,18 +88,22 @@ export default async function EnLayout({ children }) {
   };
 
   return (
-    <Layout
-        banner={banner}
-        navbar={navbar}
-        pageMap={await getPageMap('/en')}
-        docsRepositoryBase="https://github.com/Yorick-Ryu/deepshare-docs/tree/main/"
-        footer={footer}
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        {children}
-      </Layout>
+    <html lang="en" dir="ltr" suppressHydrationWarning>
+      <body>
+        <Layout
+          banner={banner}
+          navbar={navbar}
+          pageMap={await getPageMap('/en')}
+          docsRepositoryBase="https://github.com/Yorick-Ryu/deepshare-docs/tree/main/"
+          footer={footer}
+        >
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          {children}
+        </Layout>
+      </body>
+    </html>
   )
 }
