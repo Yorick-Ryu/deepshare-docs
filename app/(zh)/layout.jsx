@@ -4,6 +4,7 @@ import { getPageMap } from 'nextra/page-map'
 import { LanguageSwitcher } from '../_components/language-switcher'
 
 export const metadata = {
+  metadataBase: new URL('https://docs.deepshare.app'),
   title: {
     default: 'DeepShare 文档 - AI对话导出Word | 公式复制 | 对话截图',
     template: '%s | DeepShare'
