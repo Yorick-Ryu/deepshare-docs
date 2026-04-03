@@ -72,6 +72,20 @@ const navbar = (
 const footer = <Footer>MIT {new Date().getFullYear()} © DeepShare.</Footer>
 
 export default async function ZhLayout({ children }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'DeepShare',
+    operatingSystem: 'Windows, macOS, Linux, ChromeOS',
+    applicationCategory: 'BrowserExtension',
+    description: '一键从DeepSeek、ChatGPT、Gemini、豆包等AI对话导出排版精美的Word文档，复制其中的公式；支持长截图。',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
+
   return (
     <Layout
         banner={banner}
@@ -80,6 +94,10 @@ export default async function ZhLayout({ children }) {
         docsRepositoryBase="https://github.com/Yorick-Ryu/deepshare-docs/tree/main/"
         footer={footer}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </Layout>
   )

@@ -72,6 +72,20 @@ const navbar = (
 const footer = <Footer>MIT {new Date().getFullYear()} © DeepShare.</Footer>
 
 export default async function EnLayout({ children }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'DeepShare',
+    operatingSystem: 'Windows, macOS, Linux, ChromeOS',
+    applicationCategory: 'BrowserExtension',
+    description: 'One-click export beautifully formatted Word documents from DeepSeek, ChatGPT, Gemini, and other AI chats.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
+
   return (
     <Layout
         banner={banner}
@@ -80,6 +94,10 @@ export default async function EnLayout({ children }) {
         docsRepositoryBase="https://github.com/Yorick-Ryu/deepshare-docs/tree/main/"
         footer={footer}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </Layout>
   )
