@@ -1,6 +1,6 @@
-import 'nextra-theme-docs/style.css'
+import '../globals.css'
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner } from 'nextra/components'
+import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { LanguageSwitcher } from '../_components/language-switcher'
 
@@ -89,6 +89,7 @@ export default async function EnLayout({ children }) {
 
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
+      <Head />
       <body>
         <Layout
           banner={banner}
