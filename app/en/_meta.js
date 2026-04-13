@@ -19,7 +19,7 @@ export default {
   },
   purchase: {
     title: 'Purchase',
-    href: 'https://ds.rick216.cn/purchase-en.html',
+    href: 'https://ds.rick216.cn/en/price.html',
     type: 'page'
   },
   download: {
