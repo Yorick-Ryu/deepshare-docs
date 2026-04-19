@@ -59,7 +59,7 @@ const navbar = (
   <Navbar
     logo={
       <>
-        <img src="/images/deepshare-icon.svg" alt="Logo" width={40} height={40} />
+        <img src="/images/deepshare-icon.svg" alt="Logo" width={40} height={40} fetchPriority="high" />
         <span style={{ marginLeft: '.4em', fontWeight: 800, fontSize: '1.2em' }}>
           DeepShare
         </span>
