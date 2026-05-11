@@ -29,6 +29,14 @@ export const metadata = {
     siteName: 'DeepShare',
     images: ['https://docs.deepshare.app/images/cover.png'],
   },
+  alternates: {
+    canonical: '/en/',
+    languages: {
+      'en-US': '/en/',
+      'zh-CN': '/',
+      'x-default': '/',
+    },
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'DeepShare Docs',
@@ -75,16 +83,67 @@ const footer = <Footer>MIT {new Date().getFullYear()} © DeepShare.</Footer>
 export default async function EnLayout({ children }) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'DeepShare',
-    operatingSystem: 'Windows, macOS, Linux, ChromeOS',
-    applicationCategory: 'BrowserExtension',
-    description: 'One-click export beautifully formatted Word documents from DeepSeek, ChatGPT, Gemini, and other AI chats.',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': 'https://docs.deepshare.app/#organization',
+        name: 'DeepShare',
+        url: 'https://docs.deepshare.app/en/',
+        logo: 'https://docs.deepshare.app/images/deepshare-icon.svg',
+        email: 'contact@deepshare.app',
+        sameAs: [
+          'https://ds.rick216.cn/index-en',
+          'https://www.deepshare.app/converter-en',
+          'https://github.com/Yorick-Ryu/deep-share',
+          'https://chromewebstore.google.com/detail/omnaecaamcabmnbjnpjpecoaalfgidop',
+          'https://microsoftedge.microsoft.com/addons/detail/deepshare/pdccjnppfegekpnhfljbngammgfbcofm',
+          'https://addons.mozilla.org/firefox/addon/deepshare/'
+        ]
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://docs.deepshare.app/#website',
+        url: 'https://docs.deepshare.app/en/',
+        name: 'DeepShare Docs',
+        inLanguage: 'en-US',
+        description: 'Official DeepShare documentation for exporting AI chats to Word, copying AI formulas, capturing DeepSeek long screenshots, converting Markdown to Word, and installing the browser extension.',
+        publisher: {
+          '@id': 'https://docs.deepshare.app/#organization'
+        }
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': 'https://docs.deepshare.app/#software',
+        name: 'DeepShare',
+        url: 'https://docs.deepshare.app/en/',
+        operatingSystem: 'Windows, macOS, Linux, ChromeOS',
+        applicationCategory: 'BrowserExtension',
+        applicationSubCategory: 'AI chat export tool',
+        browserRequirements: 'Chrome, Microsoft Edge, Firefox, Quark Browser, or another Chromium-compatible browser',
+        isAccessibleForFree: true,
+        downloadUrl: [
+          'https://microsoftedge.microsoft.com/addons/detail/deepshare/pdccjnppfegekpnhfljbngammgfbcofm',
+          'https://chromewebstore.google.com/detail/omnaecaamcabmnbjnpjpecoaalfgidop',
+          'https://addons.mozilla.org/firefox/addon/deepshare/'
+        ],
+        description: 'DeepShare is a browser extension for converting AI chats from DeepSeek, ChatGPT, Gemini, Doubao, Kimi, Yuanbao, and other AI platforms into Word documents, with formula copying and DeepSeek long screenshots.',
+        featureList: [
+          'Export AI chats to Word',
+          'Export DeepSeek chats to Word and long screenshots',
+          'Convert content from ChatGPT, Gemini, Doubao, Kimi, Yuanbao, Qwen, and other AI platforms to Word',
+          'Copy formulas from AI chats as LaTeX or MathML',
+          'Convert Markdown and pasted AI responses into Word documents'
+        ],
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        publisher: {
+          '@id': 'https://docs.deepshare.app/#organization'
+        }
+      }
+    ]
   };
 
   return (
