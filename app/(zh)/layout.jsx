@@ -29,14 +29,6 @@ export const metadata = {
     siteName: 'DeepShare',
     images: ['https://docs.deepshare.app/images/cover.png'],
   },
-  alternates: {
-    canonical: '/',
-    languages: {
-      'zh-CN': '/',
-      'en-US': '/en/',
-      'x-default': '/',
-    },
-  },
   twitter: {
     card: 'summary_large_image',
     title: 'DeepShare 文档',
