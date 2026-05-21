@@ -16,6 +16,8 @@ http://localhost:3000
 
 This mode is best for fast iteration. It does not fully represent the final static export output.
 
+Do not run `npm run build` automatically after every code change. Use `npm run dev` for routine page, layout, style, and MDX checks unless the user explicitly asks for a production build.
+
 ## Static Build Preview
 
 Use the static preview command when checking the exported site, SEO output, sitemap, robots.txt, Pagefind search index, or behavior that depends on the generated `out/` directory:
