@@ -1,0 +1,48 @@
+import { Steps, Callout } from 'nextra/components'
+
+export const metadata = {
+  title: "如何打开剪贴板权限",
+  description: "DeepShare 在 DeepSeek 保存 Word 文档失败并提示需要打开剪贴板权限时，按照本教程允许 DeepSeek 读取剪贴板。",
+  alternates: {
+    canonical: "/faq/clipboard-permission/",
+  },
+  openGraph: {
+    title: "如何打开剪贴板权限",
+    description: "DeepShare 在 DeepSeek 保存 Word 文档失败并提示需要打开剪贴板权限时，按照本教程允许 DeepSeek 读取剪贴板。",
+    url: "/faq/clipboard-permission/",
+    siteName: "DeepShare",
+    images: ["https://docs.deepshare.app/images/cover.png"],
+    locale: "zh_CN",
+    type: "article",
+  },
+}
+
+# 如何打开剪贴板权限
+
+<Callout type="info">
+
+请在 DeepSeek 对话页面上打开剪贴板读取权限，而不是在此文档网站上打开。
+
+</Callout>
+
+当使用 DeepShare 在 DeepSeek 导出 Word 提示“保存失败，请打开读取剪接板权限”时，说明浏览器阻止了网页读取剪贴板内容，按照下面的教程打开权限即可。
+
+<Steps>
+
+### 打开 DeepSeek 对话页面
+
+打开DeepSeek，进入需要导出的对话。
+
+### 点击地址栏右侧的剪贴板图标
+
+![点击地址栏右侧的剪贴板图标](/images/deepseek/clipboard-permission-icon.png)
+
+### 将剪贴板权限改为允许
+
+把 DeepSeek 的剪贴板读取权限设置为“继续允许此网站查看剪贴板”，然后点击“完成”。
+
+![允许 DeepSeek 读取剪贴板](/images/deepseek/clipboard-permission-allow.png)
+
+</Steps>
+
+打开权限后，重新导出即可。

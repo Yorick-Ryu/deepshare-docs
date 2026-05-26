@@ -1,0 +1,48 @@
+import { Steps, Callout } from 'nextra/components'
+
+export const metadata = {
+  title: "How to Enable Clipboard Permission",
+  description: "When DeepShare fails to save a Word document from DeepSeek and asks for clipboard permission, follow this guide to allow DeepSeek to read the clipboard.",
+  alternates: {
+    canonical: "/en/faq/clipboard-permission/",
+  },
+  openGraph: {
+    title: "How to Enable Clipboard Permission",
+    description: "When DeepShare fails to save a Word document from DeepSeek and asks for clipboard permission, follow this guide to allow DeepSeek to read the clipboard.",
+    url: "/en/faq/clipboard-permission/",
+    siteName: "DeepShare",
+    images: ["https://docs.deepshare.app/images/cover.png"],
+    locale: "en_US",
+    type: "article",
+  },
+}
+
+# How to Enable Clipboard Permission
+
+<Callout type="info">
+
+Enable clipboard read permission on the DeepSeek chat page, not on this documentation website.
+
+</Callout>
+
+When DeepShare shows "Failed to save, please enable clipboard read permission" while exporting a Word document from DeepSeek, it means the browser has blocked the web page from reading clipboard content. Follow the steps below to enable the permission.
+
+<Steps>
+
+### Open the DeepSeek chat page
+
+Open DeepSeek and enter the conversation you want to export.
+
+### Click the clipboard icon on the right side of the address bar
+
+![Click the clipboard icon on the right side of the address bar](/images/deepseek/clipboard-permission-icon.png)
+
+### Change clipboard permission to allow
+
+Set DeepSeek's clipboard read permission to "Continue allowing this site to see your clipboard", then click "Done".
+
+![Allow DeepSeek to read the clipboard](/images/deepseek/clipboard-permission-allow.png)
+
+</Steps>
+
+After enabling the permission, export again.
